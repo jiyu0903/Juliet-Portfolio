@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan | IT Student & Systems Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDFBF7',
+                        warmbeige: '#F4EFEB',
+                        terracotta: '#D97757',
+                        terracottadark: '#B85E3E',
+                        espresso: '#2C221E',
+                        softamber: '#E0A96D',
+                        sandstone: '#E8E2D5',
+                        cardbg: '#FAF7F2'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FDFBF7;
+            color: #2C221E;
+        }
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4EFEB;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D97757;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B85E3E;
+        }
+    </style>
+</head>
+<body class="bg-cream text-espresso antialiased selection:bg-terracotta selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-sandstone/60 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-terracotta text-cream flex items-center justify-center font-bold text-lg shadow-sm group-hover:bg-terracottadark transition-colors">
+                    AM
+                </div>
+                <span class="heading-font text-xl font-bold tracking-tight text-espresso">Alex Morgan</span>
+            </a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-espresso/80">
+                <a href="#about" class="hover:text-terracotta transition-colors">About</a>
+                <a href="#skills" class="hover:text-terracotta transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-terracotta transition-colors">Projects</a>
+                <a href="#background" class="hover:text-terracotta transition-colors">Background</a>
+                <a href="#contact" class="hover:text-terracotta transition-colors">Links & Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-terracotta text-cream font-medium text-sm shadow-sm hover:bg-terracottadark transition-all hover:shadow">
+                    Let's Connect
+                </a>
+            </div>
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-espresso text-2xl focus:outline-none p-1">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 right-0 bg-cream border-b border-sandstone/80 px-6 py-6 shadow-lg flex flex-col gap-4 text-espresso font-medium">
+            <a href="#about" class="mobile-link hover:text-terracotta transition-colors py-2">About</a>
+            <a href="#skills" class="mobile-link hover:text-terracotta transition-colors py-2">Skills</a>
+            <a href="#projects" class="mobile-link hover:text-terracotta transition-colors py-2">Projects</a>
+            <a href="#background" class="mobile-link hover:text-terracotta transition-colors py-2">Background</a>
+            <a href="#contact" class="mobile-link hover:text-terracotta transition-colors py-2">Links & Contact</a>
+            <a href="#contact" class="mobile-link mt-2 text-center w-full py-3 rounded-xl bg-terracotta text-cream font-medium shadow-sm">Let's Connect</a>
+        </div>
+    </header>
+
+    <section id="hero" class="min-h-screen pt-28 sm:pt-32 pb-16 px-6 flex items-center relative overflow-hidden bg-gradient-to-b from-warmbeige/50 via-cream to-cream">
+        <!-- Cozy background glows -->
+        <div class="absolute top-20 right-10 w-96 h-96 bg-softamber/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 bg-terracotta/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Left Info Block -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sandstone/60 border border-sandstone text-terracotta text-xs font-semibold tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-terracotta animate-pulse"></span>
+                    IT Student & Systems Developer
+                </div>
+                <h1 class="heading-font text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-espresso leading-[1.15]">
+                    Crafting <span class="text-terracottadark italic">smart software</span> & reliable system architectures.
+                </h1>
+                <p class="text-base sm:text-lg text-espresso/70 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                    Hi! I'm Alex Morgan, an Information Technology student specializing in Django web applications, database normalization, system design diagrams, and network diagnostic tools.
+                </p>
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                    <a href="#projects" class="px-7 py-3.5 rounded-xl bg-terracotta text-cream font-semibold shadow-md hover:bg-terracottadark transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <span>Explore Projects</span>
+                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                    <a href="#contact" class="px-7 py-3.5 rounded-xl bg-warmbeige text-espresso font-semibold border border-sandstone hover:bg-sandstone/60 transition-all">
+                        Link Spaces & Contact
+                    </a>
+                </div>
+                <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-espresso/60 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-terracotta"></i>
+                        <span>BS Information Technology</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-diagram-project text-terracotta"></i>
+                        <span>UML & System Diagrams</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Hero Photo Frame / Preview Container -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <!-- Layered decorative backdrop card -->
+                    <div class="absolute -inset-3 bg-gradient-to-tr from-softamber/30 to-terracotta/20 rounded-[2.5rem] transform -rotate-2 border border-sandstone/80 blur-xs"></div>
+                    
+                    <!-- Main Photo Frame Card -->
+                    <div class="relative bg-cardbg p-6 rounded-[2rem] border border-sandstone shadow-xl space-y-5">
+                        
+                        <!-- Top status bar -->
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-terracotta uppercase tracking-wider bg-terracotta/10 px-3 py-1 rounded-full flex items-center gap-1.5">
+                                <i class="fa-solid fa-camera text-xs"></i> Profile Photo
+                            </span>
+                            <div class="flex gap-1.5">
+                                <span class="w-2.5 h-2.5 rounded-full bg-terracotta/40 inline-block"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-softamber/60 inline-block"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-espresso/20 inline-block"></span>
+                            </div>
+                        </div>
+
+                        <!-- Sample Photo Display Space -->
+                        <div class="relative group rounded-2xl overflow-hidden border-2 border-sandstone bg-warmbeige aspect-4/3 flex items-center justify-center shadow-inner">
+                            <img id="sample-photo-preview" src="https://placehold.co/600x450/E8E2D5/2C221E?text=Sample+Photo+Here" alt="Alex Morgan - Sample Photo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            
+                            <!-- Hover upload button overlay -->
+                            <label for="hero-photo-input" class="absolute inset-0 bg-espresso/50 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center text-white cursor-pointer gap-2 p-4 text-center">
+                                <i class="fa-solid fa-cloud-arrow-up text-2xl"></i>
+                                <span class="text-xs font-semibold">Click to upload your sample photo</span>
+                            </label>
+                            <input type="file" id="hero-photo-input" accept="image/*" class="hidden">
+                        </div>
+
+                        <!-- Photo details & quick info -->
+                        <div class="flex items-center justify-between pt-1">
+                            <div>
+                                <h3 class="heading-font text-lg font-bold text-espresso">Alex Morgan</h3>
+                                <p class="text-xs text-espresso/60">3rd Year IT Student & Tech Enthusiast</p>
+                            </div>
+                            <label for="hero-photo-input" class="px-3 py-1.5 bg-warmbeige hover:bg-sandstone text-espresso border border-sandstone rounded-xl text-xs font-semibold cursor-pointer transition-colors flex items-center gap-1.5">
+                                <i class="fa-solid fa-arrows-rotate text-terracotta text-[11px]"></i>
+                                <span>Replace</span>
+                            </label>
+                        </div>
+
+                        <!-- Highlights list -->
+                        <div class="p-3.5 rounded-xl bg-warmbeige/70 border border-sandstone/60 grid grid-cols-2 gap-2 text-center text-xs font-medium text-espresso/80">
+                            <div class="bg-cream/80 py-2 px-1 rounded-lg border border-sandstone/40">
+                                <div class="text-terracottadark font-bold">Web & Backend</div>
+                                <div class="text-[10px] text-espresso/60">Django & PHP</div>
+                            </div>
+                            <div class="bg-cream/80 py-2 px-1 rounded-lg border border-sandstone/40">
+                                <div class="text-terracottadark font-bold">Systems & Linux</div>
+                                <div class="text-[10px] text-espresso/60">Networking Tools</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-warmbeige/30 border-y border-sandstone/40">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs font-bold text-terracotta uppercase tracking-widest">About Me</span>
+                <h2 class="heading-font text-3xl sm:text-4xl font-bold text-espresso">Analytical & Creative Problem Solver</h2>
+                <p class="text-espresso/70 text-sm sm:text-base">
+                    Combining software logic, structured data architectures, and user-centric web design.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+                <!-- Highlight Box 1 -->
+                <div class="md:col-span-5 space-y-6 flex flex-col justify-between">
+                    <div class="bg-cardbg p-6 rounded-3xl border border-sandstone shadow-sm space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-cubes"></i>
+                        </div>
+                        <h3 class="heading-font text-xl font-bold text-espresso">Full-Stack Development</h3>
+                        <p class="text-xs sm:text-sm text-espresso/70 leading-relaxed">
+                            Proficient in crafting robust Django and PHP backends paired with clean HTML5, Tailwind CSS, and JavaScript interfaces.
+                        </p>
+                    </div>
+
+                    <div class="bg-cardbg p-6 rounded-3xl border border-sandstone shadow-sm space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-softamber/20 text-terracottadark flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-sitemap"></i>
+                        </div>
+                        <h3 class="heading-font text-xl font-bold text-espresso">System Modeling & UML</h3>
+                        <p class="text-xs sm:text-sm text-espresso/70 leading-relaxed">
+                            Skilled in designing comprehensive Data Flow Diagrams (DFD), Entity Relationship Diagrams (ERD), and Mermaid workflow charts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Highlight Box 2 -->
+                <div class="md:col-span-7 bg-cardbg p-8 sm:p-10 rounded-3xl border border-sandstone shadow-sm flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-full bg-sandstone/60 text-terracotta text-xs font-bold uppercase tracking-wide">
+                            My IT Focus
+                        </div>
+                        <h3 class="heading-font text-2xl font-bold text-espresso">Building Connected Systems From Ground Up</h3>
+                        <p class="text-espresso/80 text-sm sm:text-base leading-relaxed">
+                            My coursework and hands-on projects revolve around building scalable software systems, analyzing network packets, and writing optimized relational database queries. I enjoy translating complex business logic into intuitive user interfaces with a cozy, human touch.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-sandstone/60">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center text-xs mt-0.5 shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-espresso">Web Systems</h4>
+                                <p class="text-xs text-espresso/60">Django, PHP & REST APIs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center text-xs mt-0.5 shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-espresso">Relational Databases</h4>
+                                <p class="text-xs text-espresso/60">MySQL & Normalized Schemas</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center text-xs mt-0.5 shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-espresso">OS & Networking</h4>
+                                <p class="text-xs text-espresso/60">Linux, Wireshark & Packets</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center text-xs mt-0.5 shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-espresso">System Architecture</h4>
+                                <p class="text-xs text-espresso/60">UML, DFD & Mermaid Diagrams</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs font-bold text-terracotta uppercase tracking-widest">Technical Skillset</span>
+                <h2 class="heading-font text-3xl sm:text-4xl font-bold text-espresso">Skills & Core Competencies</h2>
+                <p class="text-espresso/70 text-sm sm:text-base">
+                    Languages, frameworks, database systems, and networking diagnostics I specialize in.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skill 1: Web Development -->
+                <div class="bg-cardbg p-6 rounded-3xl border border-sandstone shadow-sm hover:shadow-md transition-all group flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center text-xl group-hover:bg-terracotta group-hover:text-cream transition-colors">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="heading-font text-xl font-bold text-espresso">Web Development</h3>
+                        <p class="text-xs text-espresso/60">Constructing responsive frontends and resilient backends.</p>
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">Django</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">PHP</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">HTML5</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">Tailwind CSS</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-sandstone/60 text-[11px] text-espresso/50 flex items-center justify-between">
+                        <span>Level</span>
+                        <span class="font-semibold text-terracottadark">Advanced</span>
+                    </div>
+                </div>
+
+                <!-- Skill 2: Database & Systems -->
+                <div class="bg-cardbg p-6 rounded-3xl border border-sandstone shadow-sm hover:shadow-md transition-all group flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-softamber/20 text-terracottadark flex items-center justify-center text-xl group-hover:bg-softamber group-hover:text-espresso transition-colors">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h3 class="heading-font text-xl font-bold text-espresso">Databases & SQL</h3>
+                        <p class="text-xs text-espresso/60">Architecting relational database models and normalized schemas.</p>
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">MySQL</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">Relational DB</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">SQLite</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">Query Optimization</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-sandstone/60 text-[11px] text-espresso/50 flex items-center justify-between">
+                        <span>Level</span>
+                        <span class="font-semibold text-terracottadark">Advanced</span>
+                    </div>
+                </div>
+
+                <!-- Skill 3: Networking & OS Diagnostics -->
+                <div class="bg-cardbg p-6 rounded-3xl border border-sandstone shadow-sm hover:shadow-md transition-all group flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center text-xl group-hover:bg-terracotta group-hover:text-cream transition-colors">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="heading-font text-xl font-bold text-espresso">Networking & OS</h3>
+                        <p class="text-xs text-espresso/60">Packet capture, Linux environments, and diagnostic utilities.</p>
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">Linux OS</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">Packet Capturing</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">Subnetting</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">Troubleshooting</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-sandstone/60 text-[11px] text-espresso/50 flex items-center justify-between">
+                        <span>Level</span>
+                        <span class="font-semibold text-terracottadark">Intermediate</span>
+                    </div>
+                </div>
+
+                <!-- Skill 4: System Diagrams & Design -->
+                <div class="bg-cardbg p-6 rounded-3xl border border-sandstone shadow-sm hover:shadow-md transition-all group flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-softamber/20 text-terracottadark flex items-center justify-center text-xl group-hover:bg-softamber group-hover:text-espresso transition-colors">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3 class="heading-font text-xl font-bold text-espresso">System Architecture</h3>
+                        <p class="text-xs text-espresso/60">Designing technical documentation, sequence flows, and diagrams.</p>
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">Mermaid Diagrams</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">DFD & ERD</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">UML Modeling</span>
+                            <span class="text-xs bg-warmbeige text-espresso px-2.5 py-1 rounded-lg border border-sandstone">Git & GitHub</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-sandstone/60 text-[11px] text-espresso/50 flex items-center justify-between">
+                        <span>Level</span>
+                        <span class="font-semibold text-terracottadark">Advanced</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 bg-warmbeige/30 border-y border-sandstone/40">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs font-bold text-terracotta uppercase tracking-widest">Portfolio Works</span>
+                <h2 class="heading-font text-3xl sm:text-4xl font-bold text-espresso">Featured Projects</h2>
+                <p class="text-espresso/70 text-sm sm:text-base">
+                    Real-world software applications, system prototypes, and photography UI templates.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1: Canteen Express -->
+                <div class="bg-cardbg rounded-3xl border border-sandstone overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-sandstone/50 relative overflow-hidden flex items-center justify-center group">
+                            <img src="https://placehold.co/600x400/E8E2D5/2C221E?text=Canteen+Express" alt="Canteen Express" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-cream/90 backdrop-blur-sm text-espresso font-semibold text-xs px-3 py-1 rounded-full border border-sandstone">Web Application</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="heading-font text-xl font-bold text-espresso">Canteen Express</h3>
+                            <p class="text-xs sm:text-sm text-espresso/70 leading-relaxed">
+                                A web-based ordering and cafeteria inventory system. Features automated stock level tracking, daily sales reporting, and streamlined order queues.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="text-[11px] bg-warmbeige text-espresso px-2 py-0.5 rounded border border-sandstone">Django</span>
+                                <span class="text-[11px] bg-warmbeige text-espresso px-2 py-0.5 rounded border border-sandstone">MySQL</span>
+                                <span class="text-[11px] bg-warmbeige text-espresso px-2 py-0.5 rounded border border-sandstone">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-sandstone/40 mt-4">
+                        <a href="https://github.com" target="_blank" class="text-xs font-semibold text-espresso hover:text-terracotta flex items-center gap-1.5 py-2">
+                            <i class="fa-brands fa-github text-sm"></i>
+                            <span>Repository</span>
+                        </a>
+                        <a href="https://example.com" target="_blank" class="px-4 py-2 rounded-xl bg-terracotta text-cream text-xs font-semibold hover:bg-terracottadark transition-all flex items-center gap-1.5">
+                            <span>Live Demo</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Retro Photography Portfolio -->
+                <div class="bg-cardbg rounded-3xl border border-sandstone overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-sandstone/50 relative overflow-hidden flex items-center justify-center group">
+                            <img src="https://placehold.co/600x400/E8E2D5/2C221E?text=Retro+Photography+Portfolio" alt="Retro Photography Portfolio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-cream/90 backdrop-blur-sm text-espresso font-semibold text-xs px-3 py-1 rounded-full border border-sandstone">Frontend Gallery</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="heading-font text-xl font-bold text-espresso">Retro Photography Portfolio</h3>
+                            <p class="text-xs sm:text-sm text-espresso/70 leading-relaxed">
+                                A cozy, editorial photography showcase website featuring vintage serif typography, interactive photo lightbox filters, and responsive masonry layouts.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="text-[11px] bg-warmbeige text-espresso px-2 py-0.5 rounded border border-sandstone">HTML5</span>
+                                <span class="text-[11px] bg-warmbeige text-espresso px-2 py-0.5 rounded border border-sandstone">Tailwind CSS</span>
+                                <span class="text-[11px] bg-warmbeige text-espresso px-2 py-0.5 rounded border border-sandstone">JS Gallery</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-sandstone/40 mt-4">
+                        <a href="https://github.com" target="_blank" class="text-xs font-semibold text-espresso hover:text-terracotta flex items-center gap-1.5 py-2">
+                            <i class="fa-brands fa-github text-sm"></i>
+                            <span>Repository</span>
+                        </a>
+                        <a href="https://example.com" target="_blank" class="px-4 py-2 rounded-xl bg-terracotta text-cream text-xs font-semibold hover:bg-terracottadark transition-all flex items-center gap-1.5">
+                            <span>Live Demo</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Network Diagnostics Dashboard -->
+                <div class="bg-cardbg rounded-3xl border border-sandstone overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 bg-sandstone/50 relative overflow-hidden flex items-center justify-center group">
+                            <img src="https://placehold.co/600x400/E8E2D5/2C221E?text=Packet+Analyzer+Tool" alt="Packet Analyzer Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-cream/90 backdrop-blur-sm text-espresso font-semibold text-xs px-3 py-1 rounded-full border border-sandstone">System Utility</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="heading-font text-xl font-bold text-espresso">Network Diagnostics Utility</h3>
+                            <p class="text-xs sm:text-sm text-espresso/70 leading-relaxed">
+                                A Python-based packet capture tool designed for local subnet traffic analysis, latency troubleshooting, and alert logging on Linux servers.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="text-[11px] bg-warmbeige text-espresso px-2 py-0.5 rounded border border-sandstone">Python</span>
+                                <span class="text-[11px] bg-warmbeige text-espresso px-2 py-0.5 rounded border border-sandstone">Linux OS</span>
+                                <span class="text-[11px] bg-warmbeige text-espresso px-2 py-0.5 rounded border border-sandstone">Mermaid Flow</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between border-t border-sandstone/40 mt-4">
+                        <a href="https://github.com" target="_blank" class="text-xs font-semibold text-espresso hover:text-terracotta flex items-center gap-1.5 py-2">
+                            <i class="fa-brands fa-github text-sm"></i>
+                            <span>Repository</span>
+                        </a>
+                        <span class="px-3 py-1.5 rounded-lg bg-sandstone/50 text-espresso/60 text-[11px] font-medium">Capstones Prototype</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="background" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs font-bold text-terracotta uppercase tracking-widest">Education & Journey</span>
+                <h2 class="heading-font text-3xl sm:text-4xl font-bold text-espresso">Academic Timeline</h2>
+                <p class="text-espresso/70 text-sm sm:text-base">
+                    Key milestones, certifications, and academic progress in Information Technology.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Timeline Card 1 -->
+                <div class="bg-cardbg p-6 sm:p-8 rounded-3xl border border-sandstone shadow-sm relative pl-8 sm:pl-10">
+                    <div class="absolute left-0 top-0 bottom-0 w-2 bg-terracotta rounded-l-3xl"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h3 class="heading-font text-xl font-bold text-espresso">Bachelor of Science in Information Technology</h3>
+                        <span class="text-xs font-semibold bg-warmbeige text-terracottadark px-3 py-1 rounded-full border border-sandstone w-fit">2023 – Present</span>
+                    </div>
+                    <p class="text-sm font-medium text-espresso/80 mb-2">3rd Year Undergraduate</p>
+                    <p class="text-xs sm:text-sm text-espresso/70 leading-relaxed">
+                        Focused on web engineering, MySQL database administration, system design diagrams (ERD, DFD, Mermaid), and operating system diagnostics.
+                    </p>
+                </div>
+
+                <!-- Timeline Card 2 -->
+                <div class="bg-cardbg p-6 sm:p-8 rounded-3xl border border-sandstone shadow-sm relative pl-8 sm:pl-10">
+                    <div class="absolute left-0 top-0 bottom-0 w-2 bg-softamber rounded-l-3xl"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h3 class="heading-font text-xl font-bold text-espresso">Lead Student Developer - Capstone Vault</h3>
+                        <span class="text-xs font-semibold bg-warmbeige text-terracottadark px-3 py-1 rounded-full border border-sandstone w-fit">2024 – 2025</span>
+                    </div>
+                    <p class="text-sm font-medium text-espresso/80 mb-2">IT Department Student Project</p>
+                    <p class="text-xs sm:text-sm text-espresso/70 leading-relaxed">
+                        Designed and maintained an internal archive web platform for indexing student IT research papers, schemas, and diagrams using PHP and MySQL.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 bg-warmbeige/30 border-t border-sandstone/40">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs font-bold text-terracotta uppercase tracking-widest">Connect With Me</span>
+                <h2 class="heading-font text-3xl sm:text-4xl font-bold text-espresso">Link Spaces & Contact</h2>
+                <p class="text-espresso/70 text-sm sm:text-base">
+                    Input your URLs into the link spaces below to dynamically update your portfolio buttons!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Link Customizer Card -->
+                <div class="lg:col-span-6 bg-cardbg p-8 rounded-3xl border border-sandstone shadow-sm space-y-6">
+                    <div class="flex items-center justify-between">
+                        <h3 class="heading-font text-xl font-bold text-espresso">Portfolio Link Inputs</h3>
+                        <span class="text-[11px] bg-terracotta/10 text-terracotta font-semibold px-2.5 py-1 rounded-full">Interactive</span>
+                    </div>
+                    <p class="text-xs text-espresso/70 leading-relaxed">
+                        Paste your live links below. Clicking "Apply Links" will update your profile links across the entire page.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-espresso/80 mb-1.5 flex items-center gap-1.5">
+                                <i class="fa-solid fa-globe text-terracotta"></i>
+                                <span>Live Website URL</span>
+                            </label>
+                            <input type="url" id="input-website" value="https://alexmorgan-it.dev" class="w-full px-4 py-2.5 rounded-xl bg-cream border border-sandstone text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-espresso/80 mb-1.5 flex items-center gap-1.5">
+                                <i class="fa-brands fa-github text-terracotta"></i>
+                                <span>GitHub Profile URL</span>
+                            </label>
+                            <input type="url" id="input-github" value="https://github.com/alexmorgan-it" class="w-full px-4 py-2.5 rounded-xl bg-cream border border-sandstone text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-espresso/80 mb-1.5 flex items-center gap-1.5">
+                                <i class="fa-brands fa-linkedin text-terracotta"></i>
+                                <span>LinkedIn Profile URL</span>
+                            </label>
+                            <input type="url" id="input-linkedin" value="https://linkedin.com/in/alexmorgan-it" class="w-full px-4 py-2.5 rounded-xl bg-cream border border-sandstone text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-espresso/80 mb-1.5 flex items-center gap-1.5">
+                                <i class="fa-solid fa-envelope text-terracotta"></i>
+                                <span>Contact Email</span>
+                            </label>
+                            <input type="email" id="input-email" value="alex.morgan@it-student.edu" class="w-full px-4 py-2.5 rounded-xl bg-cream border border-sandstone text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                        </div>
+                    </div>
+
+                    <button id="save-links-btn" class="w-full py-3 rounded-xl bg-terracotta text-cream font-semibold text-sm shadow-sm hover:bg-terracottadark transition-all">
+                        Apply Links Across Portfolio
+                    </button>
+                    <div id="link-success-msg" class="hidden text-center text-xs text-emerald-800 font-semibold bg-emerald-50 py-2.5 rounded-xl border border-emerald-200">
+                        Links updated successfully across all sections!
+                    </div>
+                </div>
+
+                <!-- Direct Message Form -->
+                <div class="lg:col-span-6 bg-cardbg p-8 rounded-3xl border border-sandstone shadow-sm space-y-6">
+                    <h3 class="heading-font text-xl font-bold text-espresso">Send a Direct Message</h3>
+                    <p class="text-xs text-espresso/70 leading-relaxed">
+                        Have an opportunity, questions about my system designs, or want to collaborate? Fill out the form below.
+                    </p>
+
+                    <form id="contact-form" class="space-y-4" onsubmit="handleContactSubmit(event)">
+                        <div>
+                            <label class="block text-xs font-bold text-espresso/80 mb-1.5">Your Name</label>
+                            <input type="text" required placeholder="e.g. Jordan Lee" class="w-full px-4 py-2.5 rounded-xl bg-cream border border-sandstone text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-espresso/80 mb-1.5">Your Email</label>
+                            <input type="email" required placeholder="e.g. jordan@example.com" class="w-full px-4 py-2.5 rounded-xl bg-cream border border-sandstone text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-espresso/80 mb-1.5">Message</label>
+                            <textarea rows="4" required placeholder="Type your message here..." class="w-full px-4 py-2.5 rounded-xl bg-cream border border-sandstone text-sm text-espresso focus:outline-none focus:border-terracotta transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 rounded-xl bg-espresso text-cream font-semibold text-sm shadow-sm hover:bg-espresso/90 transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="form-success-msg" class="hidden text-center text-xs text-emerald-800 font-semibold bg-emerald-50 py-3 rounded-xl border border-emerald-200">
+                        Thank you! Your message has been dispatched.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-cream border-t border-sandstone py-12 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-terracotta text-cream flex items-center justify-center font-bold text-sm">
+                    AM
+                </div>
+                <span class="heading-font font-bold text-espresso">Alex Morgan</span>
+            </div>
+            <p class="text-xs text-espresso/60">
+                &copy; 2026 Alex Morgan. Warm, modern IT portfolio.
+            </p>
+            <div class="flex items-center gap-4 text-espresso/70">
+                <a id="footer-website-link" href="https://alexmorgan-it.dev" target="_blank" class="w-9 h-9 rounded-xl bg-warmbeige border border-sandstone flex items-center justify-center hover:text-terracotta transition-colors" title="Live Website">
+                    <i class="fa-solid fa-globe"></i>
+                </a>
+                <a id="footer-github-link" href="https://github.com/alexmorgan-it" target="_blank" class="w-9 h-9 rounded-xl bg-warmbeige border border-sandstone flex items-center justify-center hover:text-terracotta transition-colors" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a id="footer-linkedin-link" href="https://linkedin.com/in/alexmorgan-it" target="_blank" class="w-9 h-9 rounded-xl bg-warmbeige border border-sandstone flex items-center justify-center hover:text-terracotta transition-colors" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a id="footer-email-link" href="mailto:alex.morgan@it-student.edu" class="w-9 h-9 rounded-xl bg-warmbeige border border-sandstone flex items-center justify-center hover:text-terracotta transition-colors" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Sample Photo Preview & Local File Uploader Logic
+        const heroPhotoInput = document.getElementById('hero-photo-input');
+        const samplePhotoPreview = document.getElementById('sample-photo-preview');
+
+        heroPhotoInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    samplePhotoPreview.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Link Spaces Form Management
+        const saveLinksBtn = document.getElementById('save-links-btn');
+        const linkSuccessMsg = document.getElementById('link-success-msg');
+
+        saveLinksBtn.addEventListener('click', () => {
+            const websiteUrl = document.getElementById('input-website').value;
+            const githubUrl = document.getElementById('input-github').value;
+            const linkedinUrl = document.getElementById('input-linkedin').value;
+            const emailVal = document.getElementById('input-email').value;
+
+            // Apply inputs to footer links
+            document.getElementById('footer-website-link').href = websiteUrl;
+            document.getElementById('footer-github-link').href = githubUrl;
+            document.getElementById('footer-linkedin-link').href = linkedinUrl;
+            document.getElementById('footer-email-link').href = 'mailto:' + emailVal;
+
+            // Display message box
+            linkSuccessMsg.classList.remove('hidden');
+            setTimeout(() => {
+                linkSuccessMsg.classList.add('hidden');
+            }, 4000);
+        });
+
+        // Contact Form Submission Logic
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const formSuccessMsg = document.getElementById('form-success-msg');
+            const contactForm = document.getElementById('contact-form');
+            
+            formSuccessMsg.classList.remove('hidden');
+            contactForm.reset();
+
+            setTimeout(() => {
+                formSuccessMsg.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
